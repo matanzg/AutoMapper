@@ -1,5 +1,5 @@
 $framework = '4.0'
-
+ddd
 properties {
 	$base_dir = resolve-path .
 	$build_dir = "$base_dir\build"
