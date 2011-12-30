@@ -16,15 +16,22 @@ namespace AutoMapper.Mappers
             new EnumMapper(),
             new ArrayMapper(),
 			new EnumerableToDictionaryMapper(),
+#if !SILVERLIGHT
+            new NameValueCollectionMapper(), 
+#endif
             new DictionaryMapper(),
 #if !SILVERLIGHT
             new ListSourceMapper(),
 #endif
+            new ReadOnlyCollectionMapper(), 
             new CollectionMapper(),
             new EnumerableMapper(),
             new AssignableMapper(),
             new TypeConverterMapper(),
-            new NullableMapper()
+            new NullableSourceMapper(),
+            new NullableMapper(),
+            new ImplicitConversionOperatorMapper(),
+            new ExplicitConversionOperatorMapper(),
         };
     }
 }
